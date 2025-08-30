@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kube Demo UI</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>🧊 Kube Demo UI</h1>
+        <div id="cluster-version">Loading…</div>
+    </header>
+
+
+    <main>
+        <section class="controls">
+            <label>Namespace:
+                <select id="ns-select">
+                    <option value="all">All</option>
+                </select>
+            </label>
+            <button id="refresh">Refresh</button>
+        </section>
+
+
+        <section>
+            <h2>Pods</h2>
+            <div id="pods" class="table-wrap"></div>
+        </section>
+
+
+        <section>
+            <h2>Deployments</h2>
+            <div id="deployments" class="table-wrap"></div>
+        </section>
+
+
+        <section>
+            <h2>Services</h2>
+            <div id="services" class="table-wrap"></div>
+        </section>
+    </main>
+
+
+    <footer>
+        <small>Read-only demo. Built for k3s.</small>
+    </footer>
+
+
+    <script src="/app.js" type="module"></script>
+</body>
+
+</html>
